@@ -6,9 +6,7 @@ function Contact(props) {
   return (
     <div>
       <h1>Contact Page</h1>
-      <p>
-        Contact me with any questions!
-      </p>
+      <p>Contact me with any questions!</p>
       <address>
         <strong>Jennifer Kelly</strong>
         <p>New Jersey, US</p>
@@ -20,6 +18,17 @@ function Contact(props) {
         <abbr title="Email">E: </abbr>
         <a href="mailto:#">jenLkelly@gmail.com</a>
       </address>
+      <Link
+        to={`${props.match.url}/learn`}
+        role="button"
+        className="btn btn-link"
+      >
+        Learn More
+      </Link>{" "}
+      <Link to="/contact" role="button" className="btn btn-link">
+        Learn Less
+      </Link>
+      <Route exact path={`${props.match.url}/learn`} component={Learn} />
     </div>
   );
 }
