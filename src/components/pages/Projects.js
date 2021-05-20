@@ -1,6 +1,6 @@
 import React from "react";
 
-function Blog() {
+function Projects() {
   return (
     <div>
       <h1>Blog Page</h1>
