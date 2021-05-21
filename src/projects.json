@@ -10,7 +10,7 @@
   {
     "id": 2,
     "name": "Workday Scheduler",
-    "image": "./assets/images/workday-scheduler.png",
+    "image": "/assets/images/workday-scheduler.png",
     "description": "Hourly planner that allows Users to save important tasks in a color-coordinated planner which tracks the past, present and future in real time.",
     "gitHub": "https://github.com/jkelly101/Work-Day-Scheduler",
     "web": "https://jkelly101.github.io/Work-Day-Scheduler/"
