@@ -5,7 +5,8 @@ import Home from "./components/pages/Home";
 import Projects from "./components/pages/Projects";
 import Contact from "./components/pages/Contact";
 import Footer from "./components/Footer";
-import projects from './projects.json';
+import projects from "./projects.json";
+import "./App.css";
 
 class App extends Component {
   state = {
@@ -19,12 +20,33 @@ class App extends Component {
         <Route exact path="/" component={Home} />
         <Route exact path="/projects" component={Projects} />
         <Route path="/contact" component={Contact} />
-
+        {this.state.projects.map((project) => (
+          <Projects key={project.id} {...project} />
+        ))}
         <Footer />
       </Router>
     );
   }
 }
+
+// class App extends Component {
+//   state = {
+//     projects: [...projects],
+//   };
+
+//   render() {
+//     return (
+//       <Router>
+//         <Header />
+//         <Route exact path="/" component={Home} />
+//         <Route exact path="/projects" component={Projects} />
+//         <Route path="/contact" component={Contact} />
+
+//         <Footer />
+//       </Router>
+//     );
+//   }
+// }
 
 // function App() {
 //   return (
