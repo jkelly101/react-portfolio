@@ -1,34 +1,29 @@
 import React from "react";
-import { Link, Route } from "react-router-dom";
-import Learn from "../Footer";
 
-function Contact(props) {
+function Contact() {
   return (
     <div>
       <h1>Contact Page</h1>
       <p>Contact me with any questions!</p>
-      <address>
-        <strong>Jennifer Kelly</strong>
-        <p>New Jersey, US</p>
-      </address>
-      <hr />
-      <address>
-        <abbr title="Phone">P: </abbr>
-        (856) 404-1413
-        <abbr title="Email">E: </abbr>
-        <a href="mailto:#">jenLkelly@gmail.com</a>
-      </address>
-      <Link
-        to={`${props.match.url}/learn`}
-        role="button"
-        className="btn btn-link"
-      >
-        Learn More
-      </Link>{" "}
-      <Link to="/contact" role="button" className="btn btn-link">
-        Learn Less
-      </Link>
-      <Route exact path={`${props.match.url}/learn`} component={Learn} />
+      <div className="content">
+        <ul>
+          <address>
+            <strong>Jennifer Kelly</strong>
+            <p>New Jersey, US</p>
+          </address>
+          <hr />
+          <li>
+            <strong>Phone: </strong> 856-404-1413
+          </li>
+          <li>
+            <strong>Email: </strong> <a href="mailto:#">jenLkelly@gmail.com</a>
+          </li>
+          <li>
+            <strong>GitHub: </strong>{" "}
+            <a href="https://github.com/jkelly101" target="_blank" rel="noreferrer">jkelly101</a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
